@@ -1,0 +1,116 @@
+.footer {
+  background-color: #04960b;
+  position: relative;
+  color: white;
+
+  .dark {
+    background-color: #06460a;
+    max-width: 1040px;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 10px;
+
+    @media only screen and (max-width: 768px) {
+      margin: auto 10px;
+      flex-wrap: wrap;
+      padding: 40px 15px;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      max-width: 350px;
+      font-size: 16px;
+      big {
+        font-size: 24px;
+      }
+    }
+
+    button {
+      width: 200px;
+      background-color: transparent;
+      border: 2px solid #04960b;
+      border-radius: 25px;
+      font-size: 20px;
+      height: 50px;
+      color: white;
+      cursor: pointer;
+      transition: .4s linear;
+
+      &:hover {
+        background-color: #04960b;
+        border: 2px solid #04960b;
+    }
+
+      &:focus {
+        outline: none;
+        border: 2px solid #04960b;
+      }
+    }
+  }
+
+  .white-logo {
+    height: 80px;
+    margin: auto;
+    object-fit: contain;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 0;
+
+    .social-link {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 10px 10px 20px #037d09,
+        -10px -10px 20px #05b00d;
+
+      &:active,
+      &:hover {
+        box-shadow: inset 10px 10px 20px #037d09,
+          inset -10px -10px 20px #05b00d;
+          svg {
+            width: 23px;
+            height: 23px;
+          }
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        transition: all .1s ease-in-out;
+      }
+    }
+  }
+  h5 {
+    margin: 0;
+    padding: 20px 0;
+    b {
+      font-size: 20px;
+      &:first-child {
+        color: #8859fe;
+      }
+    }
+  }
+}

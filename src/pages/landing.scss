@@ -1,0 +1,99 @@
+/* Portfolio */
+
+.landing {
+  // font-family: 'Poly', serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: auto;
+
+  .hero {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+
+    .bg {
+      position: absolute;
+      width: 100vw;
+    }
+
+    .clouds {
+      background-image: url(../images/clouds.svg);
+      width: 50000px;
+      background-position: top;
+      background-repeat: repeat-x;
+      background-size: contain;
+      height: 40vh;
+      top: 0;
+      animation: myAnim linear 2000s infinite;
+    }
+
+    @keyframes myAnim {
+      from {
+        left: 0;
+      }
+
+      to {
+        left: -50000px;
+      }
+    }
+
+    .grass {
+      background-image: url(../images/grass.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 20vh;
+      bottom: 0;
+    }
+
+    .title {
+      padding-top: 6vh;
+      text-align: center;
+      will-change: transform;
+      cursor: pointer;
+      text-shadow: rgba(0, 0, 0, 0.35) 0px 6px 10px;
+
+      h1 {
+        font-weight: normal;
+        margin-bottom: -16px;
+      }
+
+      h4 {
+        color: slategray;
+      }
+    }
+
+    .avatoon {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      bottom: 10vh;
+      left: 50%;
+      transform: translate(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  .content {
+    margin-top: -10px;
+    width: 100%;
+    color: whitesmoke;
+    z-index: 3;
+    background-color: #04960b;
+      text-align: center;
+    .intro {
+      margin: auto;
+      max-width: 768px;
+      padding: 100px 10px 200px;
+
+      h2 {
+        font-weight: 300;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}

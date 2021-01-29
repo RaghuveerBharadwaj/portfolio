@@ -1,0 +1,101 @@
+.portfolio {
+  max-width: 1040px;
+  margin: auto auto 100px;
+
+  h4 {
+    margin: -12px auto 60px;
+  }
+
+  .projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 768px) {
+      justify-content: space-evenly;
+    }
+
+    .project {
+      min-width: 270px;
+      height: 165px;
+      gap: 5%;
+      margin-bottom: 10%;
+      position: relative;
+      transition: all 1s ease-in-out;
+      cursor: pointer;
+      h3 {
+        display: none;
+      }
+      &:hover {
+        transform: scale(1.4);
+        @media only screen and (max-width: 768px) {
+          transform: scale(1.2);
+        }
+        z-index: 200;
+        .websites, .apps {
+          filter: brightness(50%);
+        }
+        h3 {
+          display: block;
+        }
+      }
+
+      .websites {
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        width: 238px;
+        height: 134px;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        transition: all 1s ease-in-out;
+      }
+      .apps {
+        position: absolute;
+        left: 221px;
+        top: 74px;
+        width: 48px;
+        height: 84px;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        border-radius: 2px;
+        transition: all 1s ease-in-out;
+      }
+
+      .desktop {
+        background: url(../images/Desktop.svg);
+        position: absolute;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .mobile {
+        top: 73px;
+        left: 220px;
+        position: absolute;
+        background: url(../images/Mobile.svg);
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 95px;
+      }
+      h3 {
+        position: absolute;
+        color: white;
+        padding: 15px;
+        z-index: 250;
+        max-width: 230px;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}
