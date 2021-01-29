@@ -16,6 +16,7 @@ export const Landing = ({ index }) => {
 
   return (
     <div className="landing" id="app">
+      {[...new Array(5)].map((a, i) => <img className="d-none" key={i} src={`assets/images/avatoons/avatoon${i}.png`} alt={"Raghuveer Bharadwaj | Web Developer | Designer " + i} />)}
       <div className="hero">
         <div className="clouds bg" />
         <div

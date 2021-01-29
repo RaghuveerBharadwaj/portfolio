@@ -15,6 +15,21 @@ export const Portfolio = ({ index }) => {
       <h4>Here are a few projects that I've worked on recently.</h4>
       <div className="projects">
         {images.map((image, i) => <div key={image.location} className="project">
+          {[...new Array(image.number)].map((a, i) =>
+          <img
+            className="d-none"
+            key={i}
+            src={`assets/images/projects/${image.location + (i + 1)}.jpeg`}
+            alt={"Raghuveer Bharadwaj | Projects | Desktop " + i}
+          />)}
+          {[...new Array(image.number)].map((a, i) =>
+          <img
+            className="d-none"
+            key={i}
+            src={`assets/images/projects/${image.location + '-mobile' + (i + 1)}.jpeg`}
+            alt={"Raghuveer Bharadwaj | Projects | Desktop " + i}
+          />)}
+          
           <div style={{ backgroundImage: `url(assets/images/projects/${image.location + ((index % image.number) + 1)}.jpeg)` }} className="websites" />
           <div className="desktop">
           </div>
