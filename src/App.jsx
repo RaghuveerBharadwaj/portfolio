@@ -1,30 +1,27 @@
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { createBrowserHistory } from "history"
+import ReactGA from "react-ga"
+import { Contact, Home } from './pages'
 import './App.css'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { Landing, Portfolio, Skills, Footer } from './pages'
-import { useScrollDirection } from './utils/scrollDirection'
-import { useEffect, useState } from 'react'
 
 const App = () => {
-  const scroll = useScrollDirection()
-  const [index, setIndex] = useState(0)
+  ReactGA.initialize("G-SQGTR7YZT7")
+  const history = createBrowserHistory();
+  history.listen(location => {
+    ReactGA.set({ page: location.pathname })
+    ReactGA.pageview(location.pathname)
+  })
 
   useEffect(() => {
-    setInterval(() => setIndex(state => state + 1), 10000)
+    ReactGA.pageview(window.location.pathname)
   }, [])
-
   return (
     <Router>
-      <Landing index={index} />
-      <Skills />
-      <Portfolio index={index} />
-      <Footer />
-      <img
-        className="logo"
-        style={{ top: scroll ? '10px' : '-50px', transform: scroll && 'rotateZ(360deg)' }}
-        src="assets/logo.png"
-        alt="Raghuveer Bharadwaj Portfolio Logo"
-        onClick={() => document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })}
-      />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
     </Router>
   )
 }

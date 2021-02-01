@@ -6,6 +6,7 @@ import {
   TelegramIcon,
   WhatsAppIcon
 } from '../images/social'
+import { useHistory } from 'react-router-dom'
 
 const socialIcons = [
   { url: "https://m.facebook.com/raghu.veer.73", icon: <FBIcon />},
@@ -16,12 +17,13 @@ const socialIcons = [
 ]
 
 export const Footer = () => {
+  const history = useHistory()
   return (
     <div className="footer">
       <div className="dark">
         <h2>Got an Idea?</h2>
         <p>Looking for a way take your business online? Let's chat over some chai.<br /> <big>☕</big> </p>
-        <button>Let's Begin</button>
+        <button onClick={() => history.push("/contact")}>Let's Begin</button>
       </div>
       <div className="footer-content">
         <img src="assets/logo.png" className="white-logo" />

@@ -1,0 +1,142 @@
+.contact {
+  background-color: #06460a;
+  padding: 80px 10px 10px;
+  min-height: 100vh;
+
+  h1 {
+    color: white;
+    max-width: 768px;
+    margin: 0 auto 50px;
+  }
+
+  .frame {
+    background-color: #04960b;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: auto;
+    width: 140px;
+    border-radius: 50%;
+    height: 140px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 8px;
+    overflow: visible;
+    margin-bottom: -70px;
+    z-index: 20;
+
+    img {
+      z-index: 20;
+      position: relative;
+      left: -2px;
+      top: -40px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  .form {
+    z-index: 1;
+    background-color: #04960b;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 8px;
+    max-width: 768px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 40px 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6%;
+    position: relative;
+    @media only screen and (max-width: 768px) {
+      padding: 20px;
+    }
+
+    .full,
+    .half {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+      position: relative;
+
+      &.full {
+        width: 100%;
+      }
+
+      &.half {
+        width: 47%;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+      label {
+        align-self: flex-start;
+        font-weight: 600;
+        color: #06460a;
+        margin: 0 5px;
+      }
+
+      span {
+        margin: 0 5px;
+        align-self: flex-start;
+        color: lightpink;
+        text-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
+        font-weight: 600;
+      }
+
+      input {
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border-color: transparent;
+        outline: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        height: 100px;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border-color: transparent;
+        outline: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    button {
+      display: block;
+      margin: auto;
+      width: 200px;
+      background-color: transparent;
+      border: 3px solid #06460a;
+      border-radius: 25px;
+      font-size: 20px;
+      height: 50px;
+      color: #06460a;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .4s linear;
+
+      &:hover {
+        color: white;
+        background-color: #06460a;
+        border: 3px solid #06460a;
+      }
+
+      &:focus {
+        color: white;
+        outline: none;
+        background-color: #06460a;
+        border: 3px solid #06460a;
+      }
+    }
+  }
+}

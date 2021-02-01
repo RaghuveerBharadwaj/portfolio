@@ -73,7 +73,7 @@
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 50px 0;
+    padding: 50px 10px;
 
     .social-link {
       cursor: pointer;
@@ -108,9 +108,6 @@
     padding: 20px 0;
     b {
       font-size: 20px;
-      &:first-child {
-        color: #8859fe;
-      }
     }
   }
 }

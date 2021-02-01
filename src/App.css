@@ -14,7 +14,7 @@ h4 {
 }
 .logo {
   position: fixed;
-  right: 50px;
+  left: 50px;
   margin: 5px;
   width: 40px;
   height: 40px;
@@ -27,8 +27,22 @@ h4 {
   padding: 6px;
   box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 4px;
 }
+
+.chat {
+  position: fixed;
+  right: 50px;
+  margin: 5px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10000;
+  transition: ease-in-out 1s;
+}
 @media only screen and (max-width: 768px) {
   .logo {
+    left: 10px;
+  }
+  .chat {
     right: 10px;
   }
 }
@@ -37,4 +51,19 @@ h4 {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px grey;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #06460a;
 }
