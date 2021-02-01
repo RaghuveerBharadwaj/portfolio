@@ -17,7 +17,7 @@ const App = () => {
     ReactGA.pageview(window.location.pathname)
   }, [])
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={Contact} />
