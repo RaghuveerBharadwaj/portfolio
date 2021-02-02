@@ -22,7 +22,7 @@ export const Footer = () => {
     <div className="footer">
       <div className="dark">
         <h2>Got an Idea?</h2>
-        <p>Looking for a way take your business online? Let's chat over some chai.<br /> <big>☕</big> </p>
+        <p>Looking for a way to take your business online? Let's chat over some chai.<br /> <big>☕</big> </p>
         <button onClick={() => history.push("/contact")}>Let's Begin</button>
       </div>
       <div className="footer-content">
