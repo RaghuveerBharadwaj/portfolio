@@ -34,7 +34,7 @@ export const Home = () => {
       className="chat"
       style={{ top: scroll ? '10px' : '-50px', transform: scroll && 'rotateZ(360deg)' }}
       src="assets/chat.svg"
-      alt="Raghuveer Bharadwaj Portfolio Logo"
+      alt="Raghuveer Bharadwaj Portfolio Contact"
       onClick={onChatClick}
     />
       <Landing index={index} />
