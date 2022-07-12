@@ -2,6 +2,7 @@ import './portfolio.scss'
 
 const images = [
   { number: 6, content: "Pranaa - A Thai Food Delivery App", location: "Pranaa/pranaa" },
+  { number: 5, content: "BillMe - One Bill, Infinite Possibilities", location: "BillMe/billme" },
   { number: 3, content: "Dovemed Physician Blog", location: "Dovemed/dovemed" },
   { number: 2, content: "Impedfin - A Finance solution for all your needs", location: "Imped/impedfin" },
   { number: 2, content: "Octacon - Consultation & Construction", location: "Octacon/octacon" },
