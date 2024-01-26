@@ -15,6 +15,14 @@
       width: 100vw;
     }
 
+    .stars {
+      background-image: url(../images/stars.gif);
+      background-position: top;
+      background-repeat: repeat;
+      height: 150vh;
+      top: -50vh;
+    }
+
     .clouds {
       background-image: url(../images/clouds.svg);
       width: 50000px;
@@ -60,13 +68,16 @@
 
       h4 {
         max-width: 100%;
-        color: slategray;
       }
     }
 
     .avatoon {
-      width: 250px;
-      height: 250px;
+      @media screen and (max-width: 900px) {
+        width: 250px;
+        height: 250px;
+      }
+      width: 400px;
+      height: 400px;
       position: absolute;
       bottom: 10vh;
       left: 50%;

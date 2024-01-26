@@ -1,28 +1,33 @@
-import './skills.scss'
+import "./skills.scss";
 
-export const Skills = () => {
+export const Skills = ({ isDarkMode }) => {
   return (
-    <div className="skills">
+    <div
+      className="skills"
+      style={{
+        backgroundColor: isDarkMode && "#394451",
+        color: isDarkMode ? "whitesmoke" : "slategray",
+      }}
+    >
       <div className="skill design">
-        <img src="assets/images/skills/design.svg" title="Design" alt="Portfolio Design Icon" />
+        <img
+          src="assets/images/skills/design.svg"
+          title="Design"
+          alt="Portfolio Design Icon"
+        />
         <div className="skill-title">
-          <h2>Designer</h2>
+          <h2 style={{ color: isDarkMode && "#FFF" }}>Designer</h2>
           <p>
-            I respect simple layout, patterns of clean nature, beautiful animations and insightful interactions.
+            I respect simple layout, patterns of clean nature, beautiful
+            animations and insightful interactions.
           </p>
         </div>
         <div className="skill-title">
-          <h5>
-            I enjoy designing :
-          </h5>
-          <p>
-            UX, UI, Web, Mobile, Apps, Logos
-          </p>
+          <h5>I enjoy designing :</h5>
+          <p>UX, UI, Web, Mobile, Apps, Logos</p>
         </div>
         <div className="skill-title">
-          <h5>
-            Design Tools:
-          </h5>
+          <h5>Design Tools:</h5>
           <p>
             Figma <br />
             Invision <br />
@@ -33,59 +38,57 @@ export const Skills = () => {
         </div>
       </div>
       <div className="skill frontend">
-        <img src="assets/images/skills/frontend.svg" alt="Portfolio Design Icon" />
+        <img
+          src="assets/images/skills/frontend.svg"
+          alt="Portfolio Design Icon"
+        />
         <div className="skill-title">
-          <h2>Front-end Developer</h2>
+          <h2 style={{ color: isDarkMode && "#FFF" }}>Front-end Developer</h2>
           <p>
-            I relish coding things from scratch and yearn bringing conceptions to reality in the browser.
+            I relish coding things from scratch and yearn bringing conceptions
+            to reality in the browser.
           </p>
         </div>
         <div className="skill-title">
-          <h5>
-            Languages I speak :
-          </h5>
-          <p>
-            HTML, CSS, Sass, Javascript
-          </p>
+          <h5>Languages I speak :</h5>
+          <p>HTML, CSS, Sass, Javascript</p>
         </div>
         <div className="skill-title">
-          <h5>
-            Front-end Tools :
-          </h5>
+          <h5>Front-end Tools :</h5>
           <p>
             React <br />
             Redux <br />
-            Vue Js<br />
-            Next Js<br />
+            Vue Js
+            <br />
+            Next Js
+            <br />
             React-Native <br />
-            Matter Js<br />
+            Matter Js
+            <br />
             Tailwind <br />
             Bootstrap <br />
             Bulma <br />
           </p>
         </div>
-
       </div>
       <div className="skill backend">
-        <img src="assets/images/skills/backend.svg" alt="Portfolio Design Icon" />
+        <img
+          src="assets/images/skills/backend.svg"
+          alt="Portfolio Design Icon"
+        />
         <div className="skill-title">
-          <h2>Back-end Developer</h2>
+          <h2 style={{ color: isDarkMode && "#FFF" }}>Back-end Developer</h2>
           <p>
-            Readable, reusable and reliable coding is my mantra. I thrive on delivering optimized results.
+            Readable, reusable and reliable coding is my mantra. I thrive on
+            delivering optimized results.
           </p>
         </div>
         <div className="skill-title">
-          <h5>
-            Frameworks I use :
-          </h5>
-          <p>
-            Node Js, Express, MongoDB
-          </p>
+          <h5>Frameworks I use :</h5>
+          <p>Node Js, Express, MongoDB</p>
         </div>
         <div className="skill-title">
-          <h5>
-            Back-end Tools :
-          </h5>
+          <h5>Back-end Tools :</h5>
           <p>
             AWS <br />
             Postgres <br />
@@ -94,8 +97,7 @@ export const Skills = () => {
             Github <br />
           </p>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
