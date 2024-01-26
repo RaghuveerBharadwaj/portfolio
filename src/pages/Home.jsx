@@ -40,16 +40,16 @@ export const Home = () => {
         alt="Raghuveer Bharadwaj Portfolio Logo"
         onClick={onLogoClick}
       />
-      <DarkModeSwitch
+      <div
+        className="rotating"
         style={{
-          position: "absolute",
-          zIndex: 20,
-          top: 15,
-          left: "calc(50% -  30px)",
+          animation: `${isDarkMode ? "zooming" : "rotating"} ${
+            isDarkMode ? 2 : 200
+          }s linear infinite`,
         }}
-        checked={isDarkMode}
-        onChange={toggleDarkMode}
-      />
+      >
+        <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} />
+      </div>
       <img
         className="chat"
         style={{
