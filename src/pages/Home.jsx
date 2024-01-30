@@ -29,7 +29,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: isDarkMode ? "slategrey" : "#e8f4fc" }}>
+    <div style={{ backgroundColor: isDarkMode ? "#181e24" : "#e8f4fc" }}>
       <img
         className="logo"
         style={{
@@ -62,7 +62,7 @@ export const Home = () => {
       />
       <Landing index={index} isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
-      <Portfolio index={index} />
+      <Portfolio index={index} isDarkMode={isDarkMode} />
       <Footer />
     </div>
   );

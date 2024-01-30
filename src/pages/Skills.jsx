@@ -5,7 +5,7 @@ export const Skills = ({ isDarkMode }) => {
     <div
       className="skills"
       style={{
-        backgroundColor: isDarkMode && "#394451",
+        backgroundColor: isDarkMode && "#2a323c",
         color: isDarkMode ? "whitesmoke" : "slategray",
       }}
     >

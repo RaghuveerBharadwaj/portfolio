@@ -24,16 +24,9 @@ export const Landing = ({ index, isDarkMode }) => {
 
   return (
     <div className="landing" id="app">
-      {[...new Array(5)].map((a, i) => (
-        <img
-          className="d-none"
-          key={i}
-          src={`assets/images/avatoons/avatoon${i}.png`}
-          alt={"Raghuveer Bharadwaj | Web Developer | Designer " + i}
-        />
-      ))}
       <div className="hero">
         <div className={`${isDarkMode ? "stars" : "clouds"} bg`} />
+        {isDarkMode && <div className="comet bg" />}
         <div className="grass bg" />
         <animated.div
           className="title"
@@ -50,13 +43,12 @@ export const Landing = ({ index, isDarkMode }) => {
             I design, I code, and I love what I do.
           </h4>
         </animated.div>
-        <div
+
+        <img
+          fetchPriority="high"
+          alt="Raghuveer Bharadwaj | Web Developer | Designer"
           className="avatoon"
-          style={{
-            backgroundImage: `url(assets/images/avatoons/avatoon${
-              index % 6
-            }.png)`,
-          }}
+          src={`assets/typing.gif`}
         />
       </div>
       <div className="content">

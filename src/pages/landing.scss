@@ -16,11 +16,22 @@
     }
 
     .stars {
-      background-image: url(../images/stars.gif);
-      background-position: top;
+      background-image: url(../images/starry.gif);
+      background-position: center;
       background-repeat: repeat;
-      height: 150vh;
-      top: -50vh;
+      background-size: contain;
+      height: 120vh;
+      top: -20vh;
+    }
+
+    .comet {
+      background-image: url(../images/comet.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: rotate(40deg);
+      height: 120vh;
+      top: -20vh;
     }
 
     .clouds {
@@ -73,8 +84,8 @@
 
     .avatoon {
       @media screen and (max-width: 900px) {
-        width: 250px;
-        height: 250px;
+        width: 320px;
+        height: 320px;
       }
       width: 400px;
       height: 400px;
