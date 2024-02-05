@@ -49,9 +49,8 @@ export const Footer = () => {
           ))}
         </div>
         <h5>
-          Made with <b>❤️</b> by Raghuveer Bharadwaj
-          <br />
-          HandCrafted by me © 2021{" "}
+          HandCrafted with ❤️ by Raghuveer Bharadwaj{" "}
+          <span style={{ color: "#000" }}>©</span> 2024
         </h5>
       </div>
     </div>

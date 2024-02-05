@@ -16,10 +16,10 @@
     }
 
     .stars {
-      background-image: url(../images/starry.gif);
+      background-image: url(../images/stars.png), linear-gradient(to top, #1b2936, #2a052d);
       background-position: center;
       background-repeat: repeat;
-      background-size: contain;
+      background-size: cover;
       height: 120vh;
       top: -20vh;
     }
@@ -32,6 +32,93 @@
       transform: rotate(40deg);
       height: 120vh;
       top: -20vh;
+    }
+
+    @keyframes bird1 {
+      0% {
+        left: -60px;
+        top: 10vh;
+      }
+     50% {
+        top: 30vh;
+      }
+       100% {
+        left: 100vw;
+        top: 25vh;
+      }
+    }
+
+    @keyframes bird2 {
+      0% {
+        left: -60px;
+        top: 30vh;
+      }50% {
+        top: 15vh;
+      }
+       100% {
+        left: 100vw;
+        top: 30vh;
+      }
+    }
+
+    @keyframes bird3 {
+      0% {
+        left: -60px;
+        top: 15vh;
+      }
+     50% {
+        top: 25vh;
+      }
+       100% {
+        left: 100vw;
+        top: 20vh;
+      }
+    }
+
+    @keyframes bird4 {
+      0% {
+        left: -60px;
+        top: 25vh;
+      }
+     50% {
+        top: 15vh;
+      }
+       100% {
+        left: 100vw;
+        top: 35vh;
+      }
+    }
+
+    .bird1 {
+      animation: bird1 cubic-bezier(0, 0.3, 1, .75) 15s infinite;
+    }
+
+    .bird2 {
+      animation: bird2 cubic-bezier(0, 0.3, 1, .75) 15s infinite;
+      animation-delay: 1s;
+    }
+
+    .bird3 {
+      animation: bird3 cubic-bezier(0, 0.3, 1, .75) 15s infinite;
+      animation-delay: 2s;
+    }
+
+    .bird4 {
+      animation: bird4 cubic-bezier(0, 0.3, 1, .75) 15s infinite;
+      animation-delay: 3s;
+    }
+
+    .birds {
+      background: url(../images/birds.gif) no-repeat;
+      left: -60px;
+      height: 5vh;
+      background-size: contain;
+      z-index: 3000;
+      pointer-events: none;
+      animation-duration: 12s;
+      @media screen and (max-width: 425px) {
+        animation-duration: 8s;
+      }
     }
 
     .clouds {
@@ -63,9 +150,35 @@
       bottom: 0;
     }
 
+    .trees {
+      background: url(../images/tree.jpeg) no-repeat;
+      background-position: right bottom;
+      @media screen and (max-width: 900px) {
+        background-position: left bottom;
+      }
+      background-size: 600px;
+      height: 600px;
+      bottom: 10vh;
+      pointer-events: none;
+    }
+
+    .owl {
+      background: url(../images/owl.svg) no-repeat;
+      background-position: left bottom;
+      @media screen and (max-width: 900px) {
+        background-position: right 50vw bottom;
+      }
+      background-size: contain;
+      height: 800px;
+      bottom: 10vh;
+      width: 150vw;
+      pointer-events: none;
+    }
+    
+
     .title {
       max-width: 100%;
-      padding-top: 6vh;
+      padding-top: 9vh;
       text-align: center;
       will-change: transform;
       cursor: pointer;
@@ -90,14 +203,26 @@
       width: 400px;
       height: 400px;
       position: absolute;
-      bottom: 10vh;
       left: 50%;
       transform: translate(-50%);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       transition: all 1s ease-in-out;
+      animation: avatoon cubic-bezier(0.42, 0, 0.58, 1) 6s infinite;
     }
+
+
+    @keyframes avatoon {
+      0%, 100% {
+        bottom: 8vh;
+      }
+
+      50% {
+        bottom: 12.5vh;
+      }
+    }
+
   }
 
   .content {

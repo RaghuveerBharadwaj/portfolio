@@ -72,7 +72,7 @@ h4 {
   position: absolute;
   z-index: 2;
   top: 10px;
-  left: calc(50% -  30px);
+  left: calc(50% -  50px);
 }
 
 @keyframes rotating {

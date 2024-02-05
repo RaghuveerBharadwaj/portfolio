@@ -27,6 +27,12 @@ export const Landing = ({ index, isDarkMode }) => {
       <div className="hero">
         <div className={`${isDarkMode ? "stars" : "clouds"} bg`} />
         {isDarkMode && <div className="comet bg" />}
+        {!isDarkMode && <div className="bird1 birds bg" />}
+        {!isDarkMode && <div className="bird2 birds bg" />}
+        {!isDarkMode && <div className="bird3 birds bg" />}
+        {!isDarkMode && <div className="bird4 birds bg" />}
+        {isDarkMode && <div className="owl bg" />}
+        {!isDarkMode && <div className="trees bg" />}
         <div className="grass bg" />
         <animated.div
           className="title"

@@ -7,7 +7,7 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 export const Home = () => {
   const [index, setIndex] = useState(0);
   const hour = new Date().getHours();
-  const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 19);
+  const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 109);
 
   const scroll = useScrollDirection();
   const history = useHistory();

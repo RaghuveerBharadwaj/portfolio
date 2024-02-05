@@ -41,7 +41,7 @@ export const DarkModeSwitch = ({
   onChange,
   children,
   checked = false,
-  size = 60,
+  size = 80,
   animationProperties = defaultProperties,
   moonColor = "white",
   sunColor = "#FFCC33",
