@@ -25,7 +25,7 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    setInterval(() => setIndex((state) => state + 1), 10000);
+    setInterval(() => setIndex((state) => state + 1), 1000);
   }, []);
 
   return (

@@ -20,7 +20,7 @@
       gap: 5%;
       margin-bottom: 10%;
       position: relative;
-      transition: all 1s ease-in-out;
+      transition: all .5s ease-in-out;
       cursor: pointer;
       h3 {
         display: none;
@@ -48,7 +48,7 @@
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
       }
       .apps {
         position: absolute;
@@ -60,7 +60,7 @@
         background-position: top;
         background-repeat: no-repeat;
         border-radius: 2px;
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
       }
 
       .desktop {
