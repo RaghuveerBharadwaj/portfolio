@@ -7,7 +7,7 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 export const Home = () => {
   const [index, setIndex] = useState(0);
   const hour = new Date().getHours();
-  const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 109);
+  const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 19);
 
   const scroll = useScrollDirection();
   const history = useHistory();
@@ -25,8 +25,28 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    setInterval(() => setIndex((state) => state + 1), 1000);
+    setInterval(() => setIndex((state) => state + 1), 2000);
   }, []);
+
+  const owlSound = new Audio(`audio/owl.mp3`);
+  const roosterSound = new Audio(`audio/rooster.mp3`);
+  const nightSound = new Audio(`audio/night.mp3`);
+  const sunriseSound = new Audio(`audio/sunrise.mp3`);
+  const switchSound = new Audio(`audio/switch.mp3`);
+  useEffect(() => {
+    switchSound.play();
+    if (isDarkMode) {
+      owlSound.play();
+      nightSound.play();
+      roosterSound.pause();
+      sunriseSound.pause();
+    } else {
+      roosterSound.play();
+      sunriseSound.play();
+      owlSound.pause();
+      nightSound.pause();
+    }
+  }, [isDarkMode]);
 
   return (
     <div style={{ backgroundColor: isDarkMode ? "#181e24" : "#e8f4fc" }}>

@@ -5,10 +5,17 @@
   <path d="M768.961 415.667L775.062 404C770.639 401.844 768.039 401.411 762.938 404L768.961 415.667Z" fill="orange" />
   <circle cx="786" cy="395" r="15" fill="orange" />
   <circle cx="751" cy="395" r="15" fill="orange" />
-  <circle cx="751" cy="395" r="10" fill="#7F3239" />
-  <circle cx="751" cy="395" r="10" fill="#7F3239" />
-  <circle cx="751" cy="395" r="10" fill="#7F3239" />
-  <circle cx="786" cy="395" r="10" fill="#7F3239" />
-  <circle cx="786" cy="395" r="10" fill="#7F3239" />
-  <circle cx="786" cy="395" r="10" fill="#7F3239" />
+  <circle cx="751" cy="395" r="10" fill="#7F3239">
+    <animate attributeName="r" values="7;10;7" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="786" cy="395" r="10" fill="#7F3239">
+    <animate attributeName="r" values="7;10;7" dur="4s" repeatCount="indefinite" />
+  </circle>
+
+  <circle cx="786" cy="395" r="15" fill="#000">
+    <animate attributeName="opacity" values="0;1;0;0;0;0;0" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="751" cy="395" r="15" fill="#000">
+    <animate attributeName="opacity" values="0;1;0;0;0;0;0" dur="4s" repeatCount="indefinite" />
+  </circle>
 </svg>
