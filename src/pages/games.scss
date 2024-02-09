@@ -1,0 +1,62 @@
+.games {
+  max-width: 1040px;
+  margin: auto auto 200px;
+
+  h4 {
+    margin: -12px auto 60px;
+  }
+
+
+  .game-grid {
+    display: grid;
+    gap: 2%;
+    padding: 2%;
+    grid-template-columns: repeat(3, 1fr); /* Create 4 equal-width columns */
+    grid-template-areas: 
+      "portrait1 landscape1 landscape1"
+      "portrait1 landscape2 landscape2"
+      "landscape3 landscape3 portrait2"
+      "landscape4 landscape4 portrait2";
+
+    .game2 { grid-area: portrait1; img{height: 100%; object-fit: fill;} }
+    .game5 { grid-area: portrait2; img{height: 100%; object-fit: fill;} }
+    .game1 { grid-area: landscape1; }
+    .game3 { grid-area: landscape2; }
+    .game4 { grid-area: landscape3; }
+    .game6 { grid-area: landscape4; }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      border-radius: 8px;
+    }
+    a {
+      transition: all .5s ease-in-out;
+      cursor: pointer;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border: 2px silver solid;
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: xx-large;
+        display: none;
+      }
+      &:hover {
+        span {
+          display: flex;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}

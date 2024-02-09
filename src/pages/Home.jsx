@@ -3,11 +3,19 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useScrollDirection } from "../utils/scrollDirection";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { Games } from "./Games";
 
 export const Home = () => {
   const [index, setIndex] = useState(0);
   const hour = new Date().getHours();
   const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 19);
+  const [sounds] = useState({
+    owlSound: new Audio(`audio/owl.mp3`),
+    roosterSound: new Audio(`audio/rooster.mp3`),
+    nightSound: new Audio(`audio/night.mp3`),
+    sunriseSound: new Audio(`audio/sunrise.mp3`),
+    switchSound: new Audio(`audio/switch.mp3`),
+  });
 
   const scroll = useScrollDirection();
   const history = useHistory();
@@ -28,12 +36,9 @@ export const Home = () => {
     setInterval(() => setIndex((state) => state + 1), 2000);
   }, []);
 
-  const owlSound = new Audio(`audio/owl.mp3`);
-  const roosterSound = new Audio(`audio/rooster.mp3`);
-  const nightSound = new Audio(`audio/night.mp3`);
-  const sunriseSound = new Audio(`audio/sunrise.mp3`);
-  const switchSound = new Audio(`audio/switch.mp3`);
   useEffect(() => {
+    const { owlSound, roosterSound, nightSound, sunriseSound, switchSound } =
+      sounds;
     switchSound.play();
     if (isDarkMode) {
       owlSound.play();
@@ -83,6 +88,7 @@ export const Home = () => {
       <Landing index={index} isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
       <Portfolio index={index} isDarkMode={isDarkMode} />
+      <Games isDarkMode={isDarkMode} />
       <Footer />
     </div>
   );

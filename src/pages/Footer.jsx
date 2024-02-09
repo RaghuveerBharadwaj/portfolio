@@ -1,6 +1,6 @@
 import "./footer.scss";
 import {
-  FBIcon,
+  GithubIcon,
   LinkedInIcon,
   MailIcon,
   TelegramIcon,
@@ -9,7 +9,7 @@ import {
 import { useHistory } from "react-router-dom";
 
 const socialIcons = [
-  { url: "https://m.facebook.com/raghu.veer.73", icon: <FBIcon /> },
+  { url: "https://github.com/RaghuveerBharadwaj", icon: <GithubIcon /> },
   {
     url: "https://www.linkedin.com/in/raghuveerbharadwaj/",
     icon: <LinkedInIcon />,
