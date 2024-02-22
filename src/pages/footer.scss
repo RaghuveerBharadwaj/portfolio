@@ -2,7 +2,6 @@
   background-color: #04960b;
   position: relative;
   color: white;
-  padding-bottom: 57px;
 
   .dark {
     background-color: #06460a;
@@ -173,10 +172,8 @@
     }
   }
   h5 {
-    margin: 0;
-    padding: 4px 0;
-    position: fixed;
-    bottom: 0;
+    margin: 0 auto;
+    padding: 4px 0 20px;
     width: 100%;
     z-index: 200;
     background-color: #04960b;
