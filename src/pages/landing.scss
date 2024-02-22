@@ -195,31 +195,36 @@
       }
     }
 
-    .avatoon {
-      @media screen and (max-width: 900px) {
-        width: 320px;
-        height: 320px;
-      }
-      width: 400px;
-      height: 400px;
+    .arrow {
       position: absolute;
       left: 50%;
-      transform: translate(-50%);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      transform: translateX(-50%);
+      animation: avatoon cubic-bezier(0.42, 0, 0.58, 1) 3s infinite;
       transition: all 1s ease-in-out;
-      animation: avatoon cubic-bezier(0.42, 0, 0.58, 1) 6s infinite;
+      .avatoon {
+        @media screen and (max-width: 900px) {
+          width: 320px;
+          height: 320px;
+        }
+        width: 400px;
+        height: 400px;
+      }
+
+      p {
+        font-weight: 700;
+        margin: -40px 0 0;
+        font-family: "Nunito";
+      }
     }
 
 
     @keyframes avatoon {
       0%, 100% {
-        bottom: 7vh;
+        bottom: 4vh;
       }
 
       50% {
-        bottom: 12.5vh;
+        bottom: 6.5vh;
       }
     }
 

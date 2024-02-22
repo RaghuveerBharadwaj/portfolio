@@ -66,6 +66,74 @@
     margin: auto;
     object-fit: contain;
   }
+
+  @keyframes heart {
+    0% { 
+      transform: rotate(0deg) scale(1.2);
+    } 
+
+    20% { 
+        transform: rotate(-4deg) scale(1.2);
+    } 
+
+    80% { 
+        transform: rotate(4deg) scale(1.2);
+    } 
+
+    100% { 
+        transform: rotate(0deg) scale(1.2);
+    } 
+  }
+
+
+  .heart {
+    width: 120px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: lightcoral;
+    &:active {
+      animation: heart .1s infinite;
+    }
+    transition: all 30ms ease-in-out;
+    svg {
+      width: 120px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 11;
+      pointer-events: none;
+    }
+    img {
+      position: relative;
+      object-fit: contain;
+      width: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .wave {
+      z-index: 5;
+      background: #ff0000;
+      position: absolute;
+      height: 250%;
+      width: 200%;
+      border-radius: 38%;
+      left: -50%;
+      transition: all 1s ease;
+      animation: wave 5s linear infinite;
+    }
+    .confetti {
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+    }
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
   p {
     font-size: 20px;
   }
@@ -110,6 +178,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 200;
     background-color: #04960b;
     font-weight: 300;
     font-family: 'Protest Riot';

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { animated, useSpring } from "react-spring";
 import "./landing.scss";
 
-export const Landing = ({ index, isDarkMode }) => {
+export const Landing = ({ isScrolled, isDarkMode }) => {
   const [springProp, setPerspective] = useSpring(() => ({
     xys: [1, 1, 1],
     config: { mass: 5, tension: 350, friction: 10 },
@@ -50,12 +50,20 @@ export const Landing = ({ index, isDarkMode }) => {
           </h4>
         </animated.div>
 
-        <img
-          fetchPriority="high"
-          alt="Raghuveer Bharadwaj | Web Developer | Designer"
-          className="avatoon"
-          src={`assets/typing.gif`}
-        />
+        <div className="arrow">
+          <img
+            fetchpriority="high"
+            className="avatoon"
+            alt="Raghuveer Bharadwaj | Web Developer | Designer"
+            src={`assets/typing.gif`}
+          />
+          {isScrolled && (
+            <>
+              <p>SCROLL DOWN</p>
+              <img src="assets/arrow.svg" alt="Scroll Down" />
+            </>
+          )}
+        </div>
       </div>
       <div className="content">
         <div className="intro">

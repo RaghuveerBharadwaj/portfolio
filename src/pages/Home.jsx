@@ -1,14 +1,14 @@
-import { Landing, Portfolio, Skills, Footer } from "./index";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Landing, Portfolio, Skills, Footer } from "./index";
 import { useScrollDirection } from "../utils/scrollDirection";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Games } from "./Games";
 
-export const Home = () => {
+export const Home = ({ device }) => {
   const [index, setIndex] = useState(0);
   const hour = new Date().getHours();
-  const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 19);
+  const [isDarkMode, setDarkMode] = useState(hour < 5 || hour > 18);
   const [sounds] = useState({
     owlSound: new Audio(`audio/owl.mp3`),
     roosterSound: new Audio(`audio/rooster.mp3`),
@@ -22,6 +22,7 @@ export const Home = () => {
 
   const toggleDarkMode = (checked) => {
     setDarkMode(checked);
+    switchSound.play();
   };
 
   const onLogoClick = () => {
@@ -36,10 +37,11 @@ export const Home = () => {
     setInterval(() => setIndex((state) => state + 1), 2000);
   }, []);
 
+  const { owlSound, roosterSound, nightSound, sunriseSound, switchSound } =
+    sounds;
   useEffect(() => {
-    const { owlSound, roosterSound, nightSound, sunriseSound, switchSound } =
-      sounds;
-    switchSound.play();
+    nightSound.volume = 0.02;
+    sunriseSound.volume = 0.02;
     if (isDarkMode) {
       owlSound.play();
       nightSound.play();
@@ -52,6 +54,26 @@ export const Home = () => {
       nightSound.pause();
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        // Mute audio when tab is not active
+        nightSound.volume = 0;
+        sunriseSound.volume = 0;
+      } else {
+        // Unmute audio when tab is active
+        nightSound.volume = 0.02;
+        sunriseSound.volume = 0.02;
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   return (
     <div style={{ backgroundColor: isDarkMode ? "#181e24" : "#e8f4fc" }}>
@@ -85,11 +107,11 @@ export const Home = () => {
         alt="Raghuveer Bharadwaj Portfolio Contact"
         onClick={onChatClick}
       />
-      <Landing index={index} isDarkMode={isDarkMode} />
+      <Landing isScrolled={scroll} index={index} isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
       <Portfolio index={index} isDarkMode={isDarkMode} />
       <Games isDarkMode={isDarkMode} />
-      <Footer />
+      <Footer device={device} />
     </div>
   );
 };
